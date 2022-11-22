@@ -22,7 +22,6 @@ void PROFINET_Analyzer::DeliverPacket(int len, const u_char* data, bool orig, ui
         interp->NewData(orig, data, data + len);
         }
     catch(const binpac::Exception& e) {
-        ProtocolViolation(zeek::util::fmt("Binpac exception: %s", e.c_msg()));
         }
     }
 
